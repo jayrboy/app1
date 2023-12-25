@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css'
 
 function App() {
   let r = '<b>React<b/>'
@@ -9,22 +10,7 @@ function App() {
       with <span dangerouslySetInnerHTML={{ __html: r }} /> & {rn}
     </div>
   )
-
-  const t = <table border="1">
-    <tr>
-      <th>Product</th>
-      <th>Price</th>
-    </tr>
-    <tr>
-      <td>React</td>
-      <td>320</td>
-    </tr>
-    <tr>
-      <td>React Native</td>
-      <td>340</td>
-    </tr>
-  </table>
-
+  // css inline
   const divStyle = {
     color: 'red',
     backgroundColor: 'powderblue',
@@ -34,9 +20,34 @@ function App() {
 
   return (
     <>
-      <div style={divStyle}>Hello React</div> < br />
-      {el} < br />
-      {t}
+      <center>
+        <div style={divStyle}>Hello React</div> < br />
+
+        {r} <br />
+        {rn} <br />
+        <br />
+
+        {el} < br />
+
+        <table border="1">
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>React</td>
+            <td>320</td>
+          </tr>
+          <tr>
+            <td>React Native</td>
+            <td>340</td>
+          </tr>
+        </table>
+
+        {/* css external*/}
+        <h2>DeveloperThai.com</h2>
+        <div className='title'>React & React Native</div>
+      </center>
     </>
   );
 }
