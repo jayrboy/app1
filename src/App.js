@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css'
+import logo from './jakkrit.jpg';
 
 function App() {
   let r = '<b>React<b/>'
@@ -18,6 +19,8 @@ function App() {
     padding: '10px',
   }
 
+  let colors = ['red','green','blue','yellow']
+  let list = colors.map(i => <li>{i}</li>)
   return (
     <>
       <center>
@@ -47,7 +50,9 @@ function App() {
         {/* css external*/}
         <h2>DeveloperThai.com</h2>
         <div className='title'>React & React Native</div>
+        <img src={logo} width='50%' alt=''/>
       </center>
+      <ul>{list}</ul>
     </>
   );
 }
